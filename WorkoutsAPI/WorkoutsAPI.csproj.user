@@ -4,6 +4,6 @@
     <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ControllerDialogWidth>650.4</WebStackScaffolding_ControllerDialogWidth>
-    <NameOfLastUsedPublishProfile>I:\Git\Masters\Enterprise\FituAPI\WorkoutsAPI\Properties\PublishProfiles\WorkoutsAPI - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>I:\Git\Masters\Enterprise\FituAPI\WorkoutsAPI\Properties\PublishProfiles\FitoWorkoutsAPI1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -18,12 +18,18 @@ namespace UserAPI.Repository
         public ViewModelRecord Add(ViewModelRecord record)
         {
             Record modelRecord = mapViewModelToModel(record);
+            var filteredRecord = _context.Records.Where(r => r.Date == modelRecord.Date && r.UserId == modelRecord.UserId);
+            if (filteredRecord.Count() > 0) {
+                //throw Exception("record already exits");
+                throw new Exception("Record already exits");
+            }
             _context.Records.Add(modelRecord);
             _context.SaveChanges();
 
             foreach (RecordWiseMeal rwm in record.RecordWiseMeals) 
             {
-               rwm.RecordId = _context.Records.Where(r => r.Date == record.Date).FirstOrDefault().Id;
+               rwm.RecordId = _context.Records.Where(r => (r.Date == record.Date) && (r.UserId == record.UserId)).LastOrDefault().Id;
+
                 rwm.Id = 0;
                 _context.RecordWiseMeals.Add(rwm);    
             }
